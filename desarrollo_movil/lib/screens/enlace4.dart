@@ -12,7 +12,7 @@ class Enlace2 extends StatelessWidget {
         title: const Text("Segunda pantalla"),
       ),
       body: const Center(
-        child: Text("Parte central"),
+        child: Text("Parte central del medio"),
       ),
     );
   }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'enlace1.dart';
 import 'enlace2.dart';
 import 'enlace3.dart';
+import 'enlace4.dart';
+import 'enlace5.dart';
 
 class MenuLateral extends StatelessWidget {
   const MenuLateral({super.key});
@@ -61,6 +64,28 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (BuildContext context) => const Enlace3(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text("Enlace 4"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace4(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text("Enlace 5"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace5(),
                 ),
               );
             },

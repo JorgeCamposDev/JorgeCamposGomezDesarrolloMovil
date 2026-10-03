@@ -13,13 +13,13 @@ class Enlace3 extends StatelessWidget {
         child: Column(
           children: [
             Flexible(
-              child: Image.asset('assets/desarrollo.png'),
+              child: Image.asset('assets/desarrollo.png'  ,width: 400, height: 400,),
             ),
             Flexible(
-              child: Image.asset('assets/monitorDesarrollo.png'),
+              child: Image.asset('assets/monitorDesarrollo.png' , width: 400, height: 400,),
             ),
             Flexible(
-              child: Image.asset('assets/programacion.png'),
+              child: Image.asset('assets/programacion.png' , width: 400, height: 400,),
             ),
           ],
         ),

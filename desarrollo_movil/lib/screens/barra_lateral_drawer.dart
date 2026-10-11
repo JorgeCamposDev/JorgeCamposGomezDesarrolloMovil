@@ -5,6 +5,10 @@ import 'enlace2.dart';
 import 'enlace3.dart';
 import 'enlace4.dart';
 import 'enlace5.dart';
+import 'enlace6.dart';
+import 'enlace7.dart';
+import 'enlace8.dart';
+import 'enlace9.dart';
 
 class MenuLateral extends StatelessWidget {
   const MenuLateral({super.key});
@@ -86,6 +90,50 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (BuildContext context) => const Enlace5(),
+                ),
+              );
+            },
+          ),
+           ListTile(
+            title: const Text("Enlace 6"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace6(),
+                ),
+              );
+            },
+          ),
+              ListTile(
+            title: const Text("Enlace 7"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace7(),
+                ),
+              );
+            },
+          ),
+               ListTile(
+            title: const Text("Enlace 8"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace8(),
+                ),
+              );
+            },
+          ),
+                ListTile(
+            title: const Text("Enlace 9"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace9(),
                 ),
               );
             },

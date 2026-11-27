@@ -3,6 +3,7 @@ import 'package:desarrollo_movil/screens/enlace1.dart';
 import 'package:desarrollo_movil/screens/enlace10.dart';
 import 'package:desarrollo_movil/screens/enlace11.dart';
 import 'package:desarrollo_movil/screens/enlace12.dart';
+import 'package:desarrollo_movil/screens/enlace13.dart';
 import 'package:desarrollo_movil/screens/enlace2.dart';
 import 'package:desarrollo_movil/screens/enlace3.dart';
 import 'package:desarrollo_movil/screens/enlace4.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         '/ej10': (context) => const Enlace10(title: 'Contador de clics personal'),
         '/ej11': (context) => const Enlace11(),
         '/ej12':(context) => const Enlace12(),
+        '/ej13': (context) => const Enlace13(),
       },
       // NO HAY QUE PONER LA PROPIEDAD HOME
     );

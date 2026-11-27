@@ -112,6 +112,13 @@ class MenuLateral extends StatelessWidget {
               Navigator.pushNamed(context, '/ej12');
             },
           ),
+           ListTile(
+            title: const Text("Enlace 13"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/ej13');
+            },
+          ),
         ],
       ),
     );

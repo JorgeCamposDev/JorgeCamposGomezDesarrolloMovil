@@ -15,7 +15,6 @@ class Enlace11 extends StatelessWidget {
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         title: const Text('Ejercicio 11 - Replica Instagram'),
-        backgroundColor: Colors.amber,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

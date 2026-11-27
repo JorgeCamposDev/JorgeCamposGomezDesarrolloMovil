@@ -1,11 +1,9 @@
+
 import 'package:flutter/material.dart';
+import 'package:desarrollo_movil/screens/barra_lateral_drawer.dart';
 
 import 'dart:math';
 import 'dart:async';
-
-void main() {
-  runApp(const Enlace12());
-}
 
 class Enlace12 extends StatefulWidget {
   const Enlace12({super.key});
@@ -15,10 +13,13 @@ class Enlace12 extends StatefulWidget {
 }
 
 class _RandomColors extends State<Enlace12> {
+
   int points = 0;
   late String randomName;
   late Color randomColor;
+
   var colorNames = ['azul', 'verde', 'naranja'];
+
   var colorHex = [
     const Color(0xFF0000FF),
     const Color(0xFF00FF00),
@@ -43,39 +44,52 @@ class _RandomColors extends State<Enlace12> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text(
-              'Puntos: $points',
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+    return Scaffold(
+      backgroundColor: Colors.white,
+
+      appBar: AppBar(
+        title: const Text('Ejercicio 12 - Colores'),
+        backgroundColor: Colors.blue,
+      ),
+
+      drawer: const MenuLateral(),
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text(
+            'Puntos: $points',
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 30,
             ),
-            Center(
-              child: GestureDetector(
-                onTap: () {
-                  onGiftTap(randomName, randomColor);
-                },
-                child: Column(
-                  children: [
-                    Container(width: 120, color: randomColor, height: 120),
-                    Text(
-                      randomName,
-                      style: TextStyle(
-                        color: randomColor,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ),
+          ),
+
+          Center(
+            child: GestureDetector(
+              onTap: () {
+                onGiftTap(randomName, randomColor);
+              },
+              child: Column(
+                children: [
+                  Container(
+                    width: 120,
+                    color: randomColor,
+                    height: 120,
+                  ),
+                  Text(
+                    randomName,
+                    style: TextStyle(
+                      color: randomColor,
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -104,11 +118,13 @@ class _RandomColors extends State<Enlace12> {
 
   void onGiftTap(String name, Color color) {
     var colorToString = hexToStringConverter(color);
+
     if (name == colorToString) {
       points++;
     } else {
       points--;
     }
+
     setState(() {});
   }
 }

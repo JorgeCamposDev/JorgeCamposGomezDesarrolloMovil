@@ -14,9 +14,7 @@ import 'package:desarrollo_movil/screens/enlace8.dart';
 import 'package:desarrollo_movil/screens/enlace9.dart';
 import 'package:flutter/material.dart';
 
-
 void main() => runApp(const MyApp());
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -26,18 +24,38 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ejemplo de drawer',
+
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.blueGrey.shade50,
+
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+          centerTitle: true,
+        ),
+
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(fontSize: 18, color: Colors.black87),
+
+          titleLarge: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
+        ),
+      ),
       initialRoute: '/',
       routes: {
         // ESTA ES LA PANTALLA DE INICIO, LO PRIMERO QUE VE EL USUARIO NADA MAS ABRIR LA APP
         '/': (context) => Scaffold(
-              appBar: AppBar(
-                title: const Text("Jorge Campos Gómez"),
-              ),
-              drawer: const MenuLateral(),
-              body: const Center(
-                child: Text("Haz click en el menú hamburguesa para ver los distintos ejercicios"),
-              ),
+          appBar: AppBar(title: const Text("Jorge Campos Gómez")),
+          drawer: const MenuLateral(),
+          body: const Center(
+            child: Text(
+              "Haz click en el menú hamburguesa para ver los distintos ejercicios",
             ),
+          ),
+        ),
         // AQUI VAN LOS EJERCICIOS CON SU RUTA CADA UNO
         '/ej1': (context) => const Enlace1(),
         '/ej2': (context) => const Enlace2(),
@@ -48,9 +66,10 @@ class MyApp extends StatelessWidget {
         '/ej7': (context) => const Enlace7(),
         '/ej8': (context) => const Enlace8(),
         '/ej9': (context) => const Enlace9(),
-        '/ej10': (context) => const Enlace10(title: 'Contador de clics personal'),
+        '/ej10': (context) =>
+            const Enlace10(title: 'Contador de clics personal'),
         '/ej11': (context) => const Enlace11(),
-        '/ej12':(context) => const Enlace12(),
+        '/ej12': (context) => const Enlace12(),
         '/ej13': (context) => const Enlace13(),
       },
       // NO HAY QUE PONER LA PROPIEDAD HOME
